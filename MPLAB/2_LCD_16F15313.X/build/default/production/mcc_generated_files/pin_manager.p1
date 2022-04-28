@@ -1,44 +1,37 @@
 Version 4.0 HI-TECH Software Intermediate Code
-[v F6263 `(v ~T0 @X0 0 tf ]
-[p mainexit ]
-"72 ./mcc_generated_files/mcc.h
-[; ;./mcc_generated_files/mcc.h: 72: void SYSTEM_Initialize(void);
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef ]
-"420 D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h
-[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 420:     struct {
-[s S31 :1 `uc 1 :5 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S31 . INTEDG . PEIE GIE ]
-"419
-[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 419: typedef union {
-[u S30 `S31 1 ]
-[n S30 . . ]
-"427
-[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 427: extern volatile INTCONbits_t INTCONbits __attribute__((address(0x00B)));
-[v _INTCONbits `VS30 ~T0 @X0 0 e@11 ]
-[v F183 `(v ~T0 @X0 1 tf1`ul ]
-"12 D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\builtins.h
-[v __delay `JF183 ~T0 @X0 0 e ]
-[p i __delay ]
-"47 ./seri_lcd.h
-[; ;./seri_lcd.h: 47: void lcd_start(void);
-[v _lcd_start `(v ~T0 @X0 0 ef ]
-"453 D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h
-[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 453:     struct {
-[s S33 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S33 . RA0 RA1 RA2 RA3 RA4 RA5 ]
-"452
-[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 452: typedef union {
-[u S32 `S33 1 ]
-[n S32 . . ]
-"462
-[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 462: extern volatile PORTAbits_t PORTAbits __attribute__((address(0x00C)));
-[v _PORTAbits `VS32 ~T0 @X0 0 e@12 ]
-"55 ./seri_lcd.h
-[; ;./seri_lcd.h: 55: void lcd_delete(void);
-[v _lcd_delete `(v ~T0 @X0 0 ef ]
-"49
-[; ;./seri_lcd.h: 49: void lcd_writemessage(char line, char column, const char *message);
-[v _lcd_writemessage `(v ~T0 @X0 0 ef3`uc`uc`*Cuc ]
+"542 D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h
+[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 542: extern volatile unsigned char LATA __attribute__((address(0x018)));
+[v _LATA `Vuc ~T0 @X0 0 e@24 ]
+"497
+[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 497: extern volatile unsigned char TRISA __attribute__((address(0x012)));
+[v _TRISA `Vuc ~T0 @X0 0 e@18 ]
+"16125
+[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 16125: extern volatile unsigned char ANSELA __attribute__((address(0x1F38)));
+[v _ANSELA `Vuc ~T0 @X0 0 e@7992 ]
+"16170
+[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 16170: extern volatile unsigned char WPUA __attribute__((address(0x1F39)));
+[v _WPUA `Vuc ~T0 @X0 0 e@7993 ]
+"16220
+[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 16220: extern volatile unsigned char ODCONA __attribute__((address(0x1F3A)));
+[v _ODCONA `Vuc ~T0 @X0 0 e@7994 ]
+"16265
+[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 16265: extern volatile unsigned char SLRCONA __attribute__((address(0x1F3B)));
+[v _SLRCONA `Vuc ~T0 @X0 0 e@7995 ]
+"16310
+[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 16310: extern volatile unsigned char INLVLA __attribute__((address(0x1F3C)));
+[v _INLVLA `Vuc ~T0 @X0 0 e@7996 ]
+"15571
+[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 15571: extern volatile unsigned char SSP1CLKPPS __attribute__((address(0x1EC5)));
+[v _SSP1CLKPPS `Vuc ~T0 @X0 0 e@7877 ]
+"16037
+[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 16037: extern volatile unsigned char RA4PPS __attribute__((address(0x1F14)));
+[v _RA4PPS `Vuc ~T0 @X0 0 e@7956 ]
+"16081
+[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 16081: extern volatile unsigned char RA5PPS __attribute__((address(0x1F15)));
+[v _RA5PPS `Vuc ~T0 @X0 0 e@7957 ]
+"15629
+[; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 15629: extern volatile unsigned char SSP1DATPPS __attribute__((address(0x1EC6)));
+[v _SSP1DATPPS `Vuc ~T0 @X0 0 e@7878 ]
 "111 D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h
 [; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 111: __asm("INDF0 equ 00h");
 [; <" INDF0 equ 00h ;# ">
@@ -843,206 +836,60 @@ Version 4.0 HI-TECH Software Intermediate Code
 "16820
 [; ;D:/Programas/MPLABX5.50/packs/Microchip/PIC16F1xxxx_DFP/1.7.146/xc8\pic\include\proc\pic16f15313.h: 16820: __asm("TOSH equ 01FEFh");
 [; <" TOSH equ 01FEFh ;# ">
-"213 ./mcc_generated_files/drivers/.././i2c1_master.h
-[v _MSSP1_InterruptHandler `*F6263 ~T0 @X0 1 e ]
-"11 main.c
-[; ;main.c: 11: const char* String(char str1[], char str2[]) {
-[v _String `(*Cuc ~T0 @X0 1 ef2`*uc`*uc ]
+"55 mcc_generated_files/pin_manager.c
+[; ;mcc_generated_files/pin_manager.c: 55: void PIN_MANAGER_Initialize(void)
+[v _PIN_MANAGER_Initialize `(v ~T0 @X0 1 ef ]
+"56
+[; ;mcc_generated_files/pin_manager.c: 56: {
 {
-[e :U _String ]
-[v _str1 `*uc ~T0 @X0 1 r1 ]
-[v _str2 `*uc ~T0 @X0 1 r2 ]
+[e :U _PIN_MANAGER_Initialize ]
 [f ]
-"18
-[; ;main.c: 18:     char str3[32];
-[v _str3 `uc ~T0 @X0 -> 32 `i a ]
-"20
-[; ;main.c: 20:     int i = 0, j = 0;
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[v _j `i ~T0 @X0 1 a ]
-[e = _j -> 0 `i ]
-"24
-[; ;main.c: 24:     while (str1[i] != '\0') {
-[e $U 793  ]
-[e :U 794 ]
-{
-"25
-[; ;main.c: 25:         str3[j] = str1[i];
-[e = *U + &U _str3 * -> -> _j `ui `ux -> -> # *U &U _str3 `ui `ux *U + _str1 * -> _i `x -> -> # *U _str1 `i `x ]
-"26
-[; ;main.c: 26:         i++;
-[e ++ _i -> 1 `i ]
-"27
-[; ;main.c: 27:         j++;
-[e ++ _j -> 1 `i ]
-"28
-[; ;main.c: 28:     }
-}
-[e :U 793 ]
-"24
-[; ;main.c: 24:     while (str1[i] != '\0') {
-[e $ != -> *U + _str1 * -> _i `x -> -> # *U _str1 `i `x `ui -> 0 `ui 794  ]
-[e :U 795 ]
-"31
-[; ;main.c: 31:     i = 0;
-[e = _i -> 0 `i ]
-"32
-[; ;main.c: 32:     while (str2[i] != '\0') {
-[e $U 796  ]
-[e :U 797 ]
-{
-"33
-[; ;main.c: 33:         str3[j] = str2[i];
-[e = *U + &U _str3 * -> -> _j `ui `ux -> -> # *U &U _str3 `ui `ux *U + _str2 * -> _i `x -> -> # *U _str2 `i `x ]
-"34
-[; ;main.c: 34:         i++;
-[e ++ _i -> 1 `i ]
-"35
-[; ;main.c: 35:         j++;
-[e ++ _j -> 1 `i ]
-"36
-[; ;main.c: 36:     }
-}
-[e :U 796 ]
-"32
-[; ;main.c: 32:     while (str2[i] != '\0') {
-[e $ != -> *U + _str2 * -> _i `x -> -> # *U _str2 `i `x `ui -> 0 `ui 797  ]
-[e :U 798 ]
-"37
-[; ;main.c: 37:     str3[j] = '\0';
-[e = *U + &U _str3 * -> -> _j `ui `ux -> -> # *U &U _str3 `ui `ux -> -> 0 `ui `uc ]
-"41
-[; ;main.c: 41:     return str3;
-[e ) -> &U _str3 `*Cuc ]
-[e $UE 792  ]
-"43
-[; ;main.c: 43: }
-[e :UE 792 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
-"44
-[; ;main.c: 44: void main(void)
-[v _main `(v ~T0 @X0 1 ef ]
-"45
-[; ;main.c: 45: {
-{
-[e :U _main ]
-[f ]
-"46
-[; ;main.c: 46:     int num = 10;
-[v _num `i ~T0 @X0 1 a ]
-[e = _num -> 10 `i ]
-"47
-[; ;main.c: 47:     float num_float = 10.01;
-[v _num_float `f ~T0 @X0 1 a ]
-[e = _num_float -> .10.01 `f ]
-[v F6508 `uc ~T0 @X0 -> 5 `i s ]
-[i F6508
-:U ..
-"48
-[; ;main.c: 48:     char hola[] = "Hola";
--> 72 `c
--> 111 `c
--> 108 `c
--> 97 `c
--> 0 `c
-..
-]
-[v _hola `uc ~T0 @X0 -> 5 `i a ]
-[e = _hola F6508 ]
-[v F6510 `uc ~T0 @X0 -> 8 `i s ]
-[i F6510
-:U ..
-"49
-[; ;main.c: 49:     char hola1[8] = " adios" ;
--> 32 `c
--> 97 `c
--> 100 `c
--> 105 `c
--> 111 `c
--> 115 `c
--> 0 `c
-..
-]
-[v _hola1 `uc ~T0 @X0 -> 8 `i a ]
-[e = _hola1 F6510 ]
-"51
-[; ;main.c: 51:     SYSTEM_Initialize();
-[e ( _SYSTEM_Initialize ..  ]
-"54
-[; ;main.c: 54:     (INTCONbits.GIE = 1);
-[e = . . _INTCONbits 0 3 -> -> 1 `i `uc ]
-"55
-[; ;main.c: 55:     (INTCONbits.PEIE = 1);
-[e = . . _INTCONbits 0 2 -> -> 1 `i `uc ]
-"58
-[; ;main.c: 58:     _delay((unsigned long)((500)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 500 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"59
-[; ;main.c: 59:     lcd_start();
-[e ( _lcd_start ..  ]
-"63
-[; ;main.c: 63:     while(1){
-[e :U 801 ]
-{
+"60
+[; ;mcc_generated_files/pin_manager.c: 60:     LATA = 0x00;
+[e = _LATA -> -> 0 `i `uc ]
 "65
-[; ;main.c: 65:         if(PORTAbits.RA2 == 0){
-[e $ ! == -> . . _PORTAbits 0 2 `i -> 0 `i 803  ]
-{
-"66
-[; ;main.c: 66:             lcd_delete();
-[e ( _lcd_delete ..  ]
-"67
-[; ;main.c: 67:             _delay((unsigned long)((10)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"68
-[; ;main.c: 68:             lcd_writemessage(1,1,"Acceso Denegado");
-[e ( _lcd_writemessage (3 , , -> -> 1 `i `uc -> -> 1 `i `uc :s 1C ]
-"69
-[; ;main.c: 69:             lcd_writemessage(2,2,"Inicia Sesion");
-[e ( _lcd_writemessage (3 , , -> -> 2 `i `uc -> -> 2 `i `uc :s 2C ]
+[; ;mcc_generated_files/pin_manager.c: 65:     TRISA = 0x37;
+[e = _TRISA -> -> 55 `i `uc ]
 "70
-[; ;main.c: 70:             _delay((unsigned long)((1000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"71
-[; ;main.c: 71:         }
-}
-[e :U 803 ]
-"72
-[; ;main.c: 72:         if (PORTAbits.RA2 == 1){
-[e $ ! == -> . . _PORTAbits 0 2 `i -> 1 `i 804  ]
-{
-"73
-[; ;main.c: 73:             lcd_delete();
-[e ( _lcd_delete ..  ]
-"74
-[; ;main.c: 74:             _delay((unsigned long)((10)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
+[; ;mcc_generated_files/pin_manager.c: 70:     ANSELA = 0x03;
+[e = _ANSELA -> -> 3 `i `uc ]
 "75
-[; ;main.c: 75:             lcd_writemessage(1,3,"Bienvenido");
-[e ( _lcd_writemessage (3 , , -> -> 1 `i `uc -> -> 3 `i `uc :s 3C ]
-"76
-[; ;main.c: 76:             lcd_writemessage(2,2,"Proyecto UAG");
-[e ( _lcd_writemessage (3 , , -> -> 2 `i `uc -> -> 2 `i `uc :s 4C ]
-"77
-[; ;main.c: 77:             _delay((unsigned long)((1000)*(8000000/4000.0)));
-[e ( __delay (1 -> * -> -> 1000 `i `d / -> -> 8000000 `l `d .4000.0 `ul ]
-"78
-[; ;main.c: 78:         }
+[; ;mcc_generated_files/pin_manager.c: 75:     WPUA = 0x00;
+[e = _WPUA -> -> 0 `i `uc ]
+"80
+[; ;mcc_generated_files/pin_manager.c: 80:     ODCONA = 0x00;
+[e = _ODCONA -> -> 0 `i `uc ]
+"85
+[; ;mcc_generated_files/pin_manager.c: 85:     SLRCONA = 0x37;
+[e = _SLRCONA -> -> 55 `i `uc ]
+"90
+[; ;mcc_generated_files/pin_manager.c: 90:     INLVLA = 0x3F;
+[e = _INLVLA -> -> 63 `i `uc ]
+"99
+[; ;mcc_generated_files/pin_manager.c: 99:     SSP1CLKPPS = 0x05;
+[e = _SSP1CLKPPS -> -> 5 `i `uc ]
+"100
+[; ;mcc_generated_files/pin_manager.c: 100:     RA4PPS = 0x16;
+[e = _RA4PPS -> -> 22 `i `uc ]
+"101
+[; ;mcc_generated_files/pin_manager.c: 101:     RA5PPS = 0x15;
+[e = _RA5PPS -> -> 21 `i `uc ]
+"102
+[; ;mcc_generated_files/pin_manager.c: 102:     SSP1DATPPS = 0x04;
+[e = _SSP1DATPPS -> -> 4 `i `uc ]
+"103
+[; ;mcc_generated_files/pin_manager.c: 103: }
+[e :UE 789 ]
 }
-[e :U 804 ]
+"105
+[; ;mcc_generated_files/pin_manager.c: 105: void PIN_MANAGER_IOC(void)
+[v _PIN_MANAGER_IOC `(v ~T0 @X0 1 ef ]
 "106
-[; ;main.c: 106:     }
-}
-[e :U 800 ]
-[e $U 801  ]
-[e :U 802 ]
+[; ;mcc_generated_files/pin_manager.c: 106: {
+{
+[e :U _PIN_MANAGER_IOC ]
+[f ]
 "107
-[; ;main.c: 107: }
-[e :UE 799 ]
+[; ;mcc_generated_files/pin_manager.c: 107: }
+[e :UE 790 ]
 }
-[a 3C 66 105 101 110 118 101 110 105 100 111 0 ]
-[a 1C 65 99 99 101 115 111 32 68 101 110 101 103 97 100 111 0 ]
-[a 2C 73 110 105 99 105 97 32 83 101 115 105 111 110 0 ]
-[a 4C 80 114 111 121 101 99 116 111 32 85 65 71 0 ]

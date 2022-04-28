@@ -59,20 +59,40 @@ void main(void)
     lcd_start();
     
     
- 
+    
     while(1){
         
-//          **************************************************  
+        if(BUTTON_PORT == 0){
             lcd_delete();
-             __delay_ms(50);
-            lcd_writemessage(1,1,"Hola Mundo by"); // ( Linea/ Posicion/ Mensanje)       
-            lcd_writemessage(2,3,"AramisRanirez");// ( Linea/ Posicion/ Mensanje)
+            __delay_ms(10);
+            lcd_writemessage(1,1,"Acceso Denegado"); // ( Linea/ Posicion/ Mensanje)       
+            lcd_writemessage(2,2,"Inicia Sesion");// ( Linea/ Posicion/ Mensanje)
             __delay_ms(1000);
-            lcd_delete();        
-            lcd_writemessage(1,1,"Si se pudo "); // ( Linea/ Posicion/ Mensanje)       
-            lcd_writemessage(2,3,"%d", num);// ( Linea/ Posicion/ Mensanje)   
+        }
+        if (BUTTON_PORT == 1){
+            lcd_delete();
+            __delay_ms(10);
+            lcd_writemessage(1,3,"Bienvenido"); // ( Linea/ Posicion/ Mensanje)       
+            lcd_writemessage(2,2,"Proyecto UAG");// ( Linea/ Posicion/ Mensanje)
             __delay_ms(1000);
-//          **************************************************  .
+        }
+        
+        
+////          **************************************************  
+//            lcd_delete();
+//             __delay_ms(50);
+//            lcd_writemessage(1,1,"Hola Mundo by"); // ( Linea/ Posicion/ Mensanje)       
+//            lcd_writemessage(2,3,"AramisRanirez");// ( Linea/ Posicion/ Mensanje)
+//            __delay_ms(1000);
+//            lcd_delete();        
+//            lcd_writemessage(1,1,"Si se pudo "); // ( Linea/ Posicion/ Mensanje)       
+//            lcd_writemessage(2,3,"%d", num);// ( Linea/ Posicion/ Mensanje)   
+//            __delay_ms(1000);
+////          **************************************************  .
+        
+        
+        
+        
             
             
             

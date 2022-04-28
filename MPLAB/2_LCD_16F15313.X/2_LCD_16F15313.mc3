@@ -61,7 +61,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="I2CSIMPLE" name="pubSubI2CSIMPLE_I2CMASTER/Functions"/>
-         <value>4491.1817165323155</value>
+         <value>1001.6259061057842</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="I2CSIMPLE" name="useCaseComboBoxSettings"/>
@@ -1433,7 +1433,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA2"/>
-         <value/>
+         <value>BUTTON</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="Custom Name RA3"/>
@@ -1461,7 +1461,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RA2"/>
-         <value>disabled</value>
+         <value>input</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="RA3"/>
@@ -1509,7 +1509,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRA2"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="anselUserSetRA4"/>
@@ -1529,7 +1529,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RA2"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="customNameUserSet RA3"/>
@@ -1605,7 +1605,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="trisUserSetRA2"/>
-         <value>disabled</value>
+         <value>enabled</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="Pin Module" name="trisUserSetRA4"/>
@@ -2061,7 +2061,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="ANSELA"/>
-         <value>7</value>
+         <value>3</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.RegisterKey" moduleName="Pin Module" registerAlias="CCP1PPS"/>
@@ -2205,7 +2205,7 @@
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELA" settingAlias="ANSA2"/>
-         <value>analog</value>
+         <value>digital</value>
       </entry>
       <entry>
          <key class="com.microchip.mcc.core.tokenManager.SettingKey" moduleName="Pin Module" registerAlias="ANSELA" settingAlias="ANSA4"/>
@@ -3060,7 +3060,31 @@
          <value>WDT window violation reset has not occurred</value>
       </entry>
    </tokenMap>
-   <generatedFileHashHistoryMap class="java.util.TreeMap">
+   <generatedFileHashHistoryMap class="java.util.HashMap">
+      <entry>
+         <file>mcc_generated_files\interrupt_manager.h</file>
+         <hash>c3e346448be5ef817a887713e44136419de49c850ce179847a3dd70dc9890fba</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\docs\i2c_simple.dox</file>
+         <hash>1192d1c2a9473538887a2fae1d9c6e67d9d7833010dccb831311a503f3a29da6</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\mcc.h</file>
+         <hash>53ee656030c944baa9c3efc77c40acb4b7a34f5a2ae7723fb4a55976e160ae8f</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\device_config.h</file>
+         <hash>4a4c2acfe72db81ace9062df2668b987fce96aee233c7a23e9ab74a9abb7b41e</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\drivers\i2c_simple_master.c</file>
+         <hash>ba50350955f60eba5472723ee0319caec5701e036e01de6f92bcb3ebd2c7e81d</hash>
+      </entry>
+      <entry>
+         <file>mcc_generated_files\examples\i2c1_master_example.c</file>
+         <hash>ff725db8603f5cc1545efd886dd038d4e0c5bc239fc6f408518d9c5eba9d0ef8</hash>
+      </entry>
       <entry>
          <file>main.c</file>
          <hash>400a7f6c24ac37ae9b4cb45a335f1f194dabb9e1f429bc8bf42140d7291ab789</hash>
@@ -3070,60 +3094,36 @@
          <hash>24eb366472119fb3638c9fa8291b5328b5b8cb03c8c4dec2391ab06443942680</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\device_config.h</file>
-         <hash>4a4c2acfe72db81ace9062df2668b987fce96aee233c7a23e9ab74a9abb7b41e</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\docs\i2c_simple.dox</file>
-         <hash>1192d1c2a9473538887a2fae1d9c6e67d9d7833010dccb831311a503f3a29da6</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\drivers\i2c_simple_master.c</file>
-         <hash>ba50350955f60eba5472723ee0319caec5701e036e01de6f92bcb3ebd2c7e81d</hash>
+         <file>mcc_generated_files\pin_manager.h</file>
+         <hash>a99975a5d9f5777fd71ff8aecc118fa053c49b60e4796e77043aa72263134fad</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\drivers\i2c_simple_master.h</file>
          <hash>4d313ea4669cc110baeed2f4a8491a4df811e3613b401940a12d8162b4fdd0bc</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\examples\i2c1_master_example.c</file>
-         <hash>ff725db8603f5cc1545efd886dd038d4e0c5bc239fc6f408518d9c5eba9d0ef8</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\examples\i2c1_master_example.h</file>
-         <hash>f38f074dbd81dd79810845044bb9021194b6d55355e53116851a2de06b7d5cd9</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\i2c1_master.c</file>
-         <hash>caddcd41c160ae6f2f656170003ff5d4130c153bcd2873348193a507d81843fb</hash>
+         <file>mcc_generated_files\pin_manager.c</file>
+         <hash>571a06c870d50a9318d6b2185e66420a47e0e323eff393e215d8554064066d50</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\i2c1_master.h</file>
          <hash>408b4e2a8280dd4996e2e4add3bb2a30f6cbb91c14f18b4c8ccf8a6b1afec8cb</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\interrupt_manager.c</file>
-         <hash>76c0b6c350d58254c63e336d7cb9ac8e1646ed87a96fb212278f63eecefe39e1</hash>
+         <file>mcc_generated_files\examples\i2c1_master_example.h</file>
+         <hash>f38f074dbd81dd79810845044bb9021194b6d55355e53116851a2de06b7d5cd9</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\interrupt_manager.h</file>
-         <hash>c3e346448be5ef817a887713e44136419de49c850ce179847a3dd70dc9890fba</hash>
+         <file>mcc_generated_files\interrupt_manager.c</file>
+         <hash>76c0b6c350d58254c63e336d7cb9ac8e1646ed87a96fb212278f63eecefe39e1</hash>
       </entry>
       <entry>
          <file>mcc_generated_files\mcc.c</file>
          <hash>d1a0916026893a3e94d5755706a9a97159737f2e6ef4ebf5a594104a4f0bf753</hash>
       </entry>
       <entry>
-         <file>mcc_generated_files\mcc.h</file>
-         <hash>53ee656030c944baa9c3efc77c40acb4b7a34f5a2ae7723fb4a55976e160ae8f</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\pin_manager.c</file>
-         <hash>56b19f8abc150d3a016146fac64a51f65aacda881957351c2a20a818f4bd76a7</hash>
-      </entry>
-      <entry>
-         <file>mcc_generated_files\pin_manager.h</file>
-         <hash>ee86dd65c7c36abfb57e192f8fd1fd91df88fae037f758273bfb35945c521cda</hash>
+         <file>mcc_generated_files\i2c1_master.c</file>
+         <hash>caddcd41c160ae6f2f656170003ff5d4130c153bcd2873348193a507d81843fb</hash>
       </entry>
    </generatedFileHashHistoryMap>
 </config>

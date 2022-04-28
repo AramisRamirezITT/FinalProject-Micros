@@ -65,6 +65,26 @@
 #define PULL_UP_ENABLED      1
 #define PULL_UP_DISABLED     0
 
+// get/set BUTTON aliases
+#define BUTTON_TRIS                 TRISAbits.TRISA2
+#define BUTTON_LAT                  LATAbits.LATA2
+#define BUTTON_PORT                 PORTAbits.RA2
+#define BUTTON_WPU                  WPUAbits.WPUA2
+#define BUTTON_OD                   ODCONAbits.ODCA2
+#define BUTTON_ANS                  ANSELAbits.ANSA2
+#define BUTTON_SetHigh()            do { LATAbits.LATA2 = 1; } while(0)
+#define BUTTON_SetLow()             do { LATAbits.LATA2 = 0; } while(0)
+#define BUTTON_Toggle()             do { LATAbits.LATA2 = ~LATAbits.LATA2; } while(0)
+#define BUTTON_GetValue()           PORTAbits.RA2
+#define BUTTON_SetDigitalInput()    do { TRISAbits.TRISA2 = 1; } while(0)
+#define BUTTON_SetDigitalOutput()   do { TRISAbits.TRISA2 = 0; } while(0)
+#define BUTTON_SetPullup()          do { WPUAbits.WPUA2 = 1; } while(0)
+#define BUTTON_ResetPullup()        do { WPUAbits.WPUA2 = 0; } while(0)
+#define BUTTON_SetPushPull()        do { ODCONAbits.ODCA2 = 0; } while(0)
+#define BUTTON_SetOpenDrain()       do { ODCONAbits.ODCA2 = 1; } while(0)
+#define BUTTON_SetAnalogMode()      do { ANSELAbits.ANSA2 = 1; } while(0)
+#define BUTTON_SetDigitalMode()     do { ANSELAbits.ANSA2 = 0; } while(0)
+
 // get/set RA4 procedures
 #define RA4_SetHigh()            do { LATAbits.LATA4 = 1; } while(0)
 #define RA4_SetLow()             do { LATAbits.LATA4 = 0; } while(0)

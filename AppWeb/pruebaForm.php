@@ -54,9 +54,9 @@ if(isset($_POST)){
     $nameuser = $_SESSION['usuario']['username'];
 
 
-    $value1 = $objj->{'val1'};
+    $value1 = $objj->{'val'};
     $value2 = $objj->{'val1'};
-    $value3 = $objj->{'val1'};
+    $value3 = $objj->{'val2'};
 
     $idDevice1 = $obj->{'led'};
     $idDevice2 = $obj->{'led1'};

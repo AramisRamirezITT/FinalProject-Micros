@@ -9,18 +9,20 @@ if(!isset($_SESSION)){
 if (isset($_POST)) {
     $Objj = new stdClass;
 
-    $user_arduino = $_POST['user_arduino'];
-    $pass_arduino = $_POST['pass_arduino'];
+    $val = $_POST['val'];
+    $val1 = $_POST['val1'];
+    $val2 = $_POST['val2'];
 
 
-    $Objj-> val1 = "$user_arduino";
-    $Objj-> val2 = "$pass_arduino";
+    $Objj-> val = "$val";
+    $Objj-> val1 = "$val1";
+    $Objj-> val2 = "$val2";
 
     file_put_contents("json/adc.json", json_encode($Objj));
 
-    $Usuarioobj = json_decode(file_get_contents("json/user.json"));
+    $Usuario_obj = json_decode(file_get_contents("json/user.json"));
 
-    echo  $Usuarioobj->{'usuario'};
+    echo  $Usuario_obj->{'usuario'};
 
 
 //    if($_SESSION['usuario'] == null ||  $_SESSION['usuario']  ==''){

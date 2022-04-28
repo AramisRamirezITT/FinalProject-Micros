@@ -1,13 +1,32 @@
 <?php require_once 'includes/conection.php'; ?>
+<?php require_once 'includes/consultaTable.php'; ?>
+<?php require_once 'includes/consultaGrafica.php'; ?>
+<?php //require_once 'get-sensor.php'; ?>
+
 <?php
 
 
-//if($_SESSION['usuario'] == null ||  $_SESSION['usuario']  =='' ){
-//    header('location: login.php');
-//    die();
+
+if($_SESSION['usuario'] == null ||  $_SESSION['usuario']  =='' ){
+    header('location: login.php');
+    die();
+
+}
+?>
+
+<?php
+
 //
-//}
-//?>
+$obj = json_decode(file_get_contents("json/led.json"));
+$led = $obj->{'led'};
+$led1 = $obj->{'led1'};
+$led2 = $obj->{'led2'};
+
+$ledswitch = $led <= 0 ? "unchecked" : "checked";
+$ledswitch1 = $led1 <= 0 ? "unchecked" : "checked";
+$ledswitch2 = $led2 <= 0 ? "unchecked" : "checked";
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -115,32 +134,43 @@
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item active"></li>
                 </ol>
-                <div class="row">
-                    <div class="col-xl-3 col-md-6">
-                        <h3> Dispositivo 1 </h3>
-                        <span>
-                                    <input class="l foco" type="checkbox">
+                <form action="pruebaForm.php" method="post">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6">
+                            <div class="card">
+                                <h3> Cocina </h3>
+                                <span>
+                                        <input  id="led" class="l foco" type="checkbox"  name="led" <?php echo $ledswitch ?>>
+                                    </span>
+                            </div>
+                        </div>
+                        <!---->
+                        <div class="col-xl-4 col-md-6">
+                            <div class="card">
+                                <h3> Comedor </h3>
+                                <span>
+                                    <input  id="led1" class="l foco" type="checkbox"  name="led1" <?php echo $ledswitch1 ?> >
                                 </span>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <h3> Dispositivo 2 </h3>
-                        <span>
-                                    <input class="l foco" type="checkbox">
+                            </div>
+                        </div>
+                        <div class="col-xl-4 col-md-6">
+                            <div class="card">
+                                <h3> Cuarto </h3>
+                                <span>
+                                    <input  id="led2" class="l foco" type="checkbox"  name="led2" <?php echo $ledswitch2 ?> >
                                 </span>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <h3> Dispositivo 3 </h3>
-                        <span>
-                                    <input class="l foco" type="checkbox">
-                                </span>
-                    </div>
-                    <div class="col-xl-3 col-md-6">
-                        <h3> Dispositivo 4 </h3>
-                        <span>
-                                    <input class="l foco" type="checkbox">
-                                </span>
-                    </div>
-                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col align-self-center">
+                                <input type="submit" class="btn btn-outline-success"  value="send">
+                            </div>
+                        </div>
+                    </div>  <!--        ROW        -->
+                </form>
+
+
+
 
         </main>
         <footer class="py-4 bg-light mt-auto">

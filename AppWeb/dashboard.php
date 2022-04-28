@@ -1,11 +1,21 @@
 <?php require_once 'includes/conection.php'; ?>
 <?php require_once 'includes/consultaTable.php'; ?>
 <?php require_once 'includes/consultaGrafica.php'; ?>
+<?php //require_once 'get-sensor.php'; ?>
+
 <?php
 
 
 
 if($_SESSION['usuario'] == null ||  $_SESSION['usuario']  =='' ){
+    if($_SESSION['usuario']['username'] == "adios"){
+        header('Location: dashboard.php');
+
+    }else{
+
+        header('Location: user.php');
+    }
+
     header('location: login.php');
     die();
 
@@ -15,11 +25,14 @@ if($_SESSION['usuario'] == null ||  $_SESSION['usuario']  =='' ){
 <?php
 
 //
-//$obj = json_decode(file_get_contents("json/led.json"));
-//$led = $obj->{'led'};
-//
-//$ledswitch = $led <= 0 ? "unchecked" : "checked";
-//
+$obj = json_decode(file_get_contents("json/led.json"));
+$led = $obj->{'led'};
+$led1 = $obj->{'led1'};
+$led2 = $obj->{'led2'};
+
+$ledswitch = $led <= 0 ? "unchecked" : "checked";
+$ledswitch1 = $led1 <= 0 ? "unchecked" : "checked";
+$ledswitch2 = $led2 <= 0 ? "unchecked" : "checked";
 
 ?>
 
@@ -41,7 +54,7 @@ if($_SESSION['usuario'] == null ||  $_SESSION['usuario']  =='' ){
 </head>
 
 
-<body class="sb-nav-fixed" onload="deshabilitaRetroceso()">
+<body class="sb-nav-fixed" >
 
 <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
     <!-- Navbar Brand-->
@@ -134,33 +147,41 @@ if($_SESSION['usuario'] == null ||  $_SESSION['usuario']  =='' ){
                 <ol class="breadcrumb mb-4">
                     <li class="breadcrumb-item active"></li>
                 </ol>
-                <div class="row">
-                    <form action="pruebaForm.php" method="post">
 
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card">
-                            <h3> Dispositivo 1 </h3>
-                                <span>
-                                    <input  id="led" class="l foco" type="checkbox"  name="led" >
-<!--                                        <input type="checkbox" id="led" --><?php //echo $ledswitch; ?><!-- >-->
-<!--                                       <input  id="led" class="l foco" type="checkbox"  --><?php //echo $ledswitch; ?><!-- >-->
-                                </span>
+                <form action="pruebaForm.php" method="post">
+                    <div class="row">
+                        <div class="col-xl-4 col-md-6">
+                            <div class="card">
+                                <h3> Dispositivo 1 </h3>
+                                    <span>
+                                        <input  id="led" class="l foco" type="checkbox"  name="led" <?php echo $ledswitch ?>>
+                                    </span>
+                            </div>
                         </div>
-                    </div>
 <!---->
-                    <div class="col-xl-3 col-md-6">
-                        <div class="card">
-                            <h3> Dispositivo 2 </h3>
-                            <span>
-                                <input  id="led1" class="l foco" type="checkbox"  name="led1" >
-                            </span>
+                        <div class="col-xl-4 col-md-6">
+                            <div class="card">
+                                <h3> Dispositivo 2 </h3>
+                                <span>
+                                    <input  id="led1" class="l foco" type="checkbox"  name="led1" <?php echo $ledswitch1 ?> >
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                        <input type="submit" class="btn"  value="send">
-                    </form>
-                </div>  <!--        ROW        -->
-
-
+                            <div class="col-xl-4 col-md-6">
+                                <div class="card">
+                                    <h3> Dispositivo 3 </h3>
+                                    <span>
+                                    <input  id="led2" class="l foco" type="checkbox"  name="led2" <?php echo $ledswitch2 ?> >
+                                </span>
+                                </div>
+                            </div>
+                        <div class="row">
+                            <div class="col align-self-center">
+                                <input type="submit" class="btn btn-outline-success"  value="send">
+                            </div>
+                        </div>
+                    </div>  <!--        ROW        -->
+                </form>
 
                 <hr class="dropdown-divider">
 
@@ -191,7 +212,7 @@ if($_SESSION['usuario'] == null ||  $_SESSION['usuario']  =='' ){
                 <div class="card mb-4">
                     <div class="card-header">
                         <i class="fas fa-table me-1"></i>
-                        DataTable Example
+                        DataTable Events
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple">
@@ -200,7 +221,7 @@ if($_SESSION['usuario'] == null ||  $_SESSION['usuario']  =='' ){
                                 <th>User</th>
                                 <th>Event #</th>
                                 <th>Value</th>
-                                <ht>location</ht>
+                                <th>location</th>
                                 <th>Status</th>
                                 <th>Date</th>
                             </tr>
@@ -210,7 +231,7 @@ if($_SESSION['usuario'] == null ||  $_SESSION['usuario']  =='' ){
                                 <th>User</th>
                                 <th>Event #</th>
                                 <th>Value</th>
-                                <ht>location</ht>
+                                <th>location</th>
                                 <th>Status</th>
                                 <th>Date</th>
                             </tr>
@@ -313,7 +334,11 @@ if($_SESSION['usuario'] == null ||  $_SESSION['usuario']  =='' ){
 
 </script>
 
-
+<!--<script type="text/javascript">-->
+<!--    function actualizar(){location.reload(true);}-->
+<!--    //Función para actualizar cada 5 segundos(5000 milisegundos)-->
+<!--    setInterval("actualizar()",5000);-->
+<!--</script>-->
 
 
 

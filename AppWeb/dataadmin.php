@@ -3,22 +3,26 @@
 require_once 'includes/conection.php';
 
 // Recoger datos del formulario
-if(isset($_POST)) {
-//     Borrar error antiguopassword
-//    if (isset($_SESSION['error_login'])) {
-//        session_unset($_SESSION['error_login']);
-//    }
 
+
+    $objjj = json_decode(file_get_contents("json/led.json"));
+    $objj = json_decode(file_get_contents("json/adc.json"));
 
     $nameuser = $_SESSION['usuario']['username'];
-    $value = $_POST['value'];
-    $idDevice = $_POST['id_device'];
+
+
+    $value1 = $objj->{'val1'};
+    $value2 = $objj->{'val1'};
+    $value3 = $objj->{'val1'};
+
+    $idDevice1 = $objjj->{'led'};
+    $idDevice2 = $objjj->{'led1'};
+    $idDevice3 = $objjj->{'led2'};
 
     echo var_dump($nameuser);
-    echo var_dump($value);
-    echo var_dump($idDevice);
 
-    ;
+
+
     $query_userId = "SELECT id_us FROM users WHERE  username =  '$nameuser'";
 
     $login = mysqli_query($db, $query_userId);
@@ -28,10 +32,36 @@ if(isset($_POST)) {
     $date = date('Y-m-d H:i:s');
     echo $date;
 
-    $sql = "INSERT INTO events VALUES(null,'$value','$idDevice','$user_id',CURRENT_TIMESTAMP, 1);";
-    var_dump($sql);
-    $guardar = mysqli_query($db, $sql);
-    echo var_dump($guardar);
+    //caso 1 si led 1 on guardar datos
+    if($idDevice1 == 255){
+        $sql = "INSERT INTO events VALUES(null,'$value1','Cuarto','$user_id',CURRENT_TIMESTAMP, 1);";
+        var_dump($sql);
+        $guardar = mysqli_query($db, $sql);
+        echo var_dump($guardar);
+    }
+
+    //caso 2
+    if($idDevice2 == 255){
+        $sql = "INSERT INTO events VALUES(null,'$value2','Cosina','$user_id',CURRENT_TIMESTAMP, 1);";
+        var_dump($sql);
+        $guardar = mysqli_query($db, $sql);
+        echo var_dump($guardar);
+    }
+    //caso 3
+    if($idDevice3 == 255){
+        $sql = "INSERT INTO events VALUES(null,'$value3','Sala','$user_id',CURRENT_TIMESTAMP, 1);";
+        var_dump($sql);
+        $guardar = mysqli_query($db, $sql);
+        echo var_dump($guardar);
+    }
+
+
+
+//
+//    $sql = "INSERT INTO events VALUES(null,'$value','$idDevice','$user_id',CURRENT_TIMESTAMP, 1);";
+//    var_dump($sql);
+//    $guardar = mysqli_query($db, $sql);
+//    echo var_dump($guardar);
 
     if($guardar){
         $_SESSION['save_event'] = "El registro se ha completado con éxito";
@@ -41,58 +71,7 @@ if(isset($_POST)) {
         echo var_dump( $_SESSION['errores']['save_event_error']);
     }
 
-}
 
-
-//    // Recoger datos del formulario
-//    $username = trim($_POST['username']);
-//    $password = $_POST['password'];
-//
-//    // Consulta para comprobar las credenciales del usuario
-//    $sql = "SELECT * FROM users WHERE username = '$username'";
-//    $login = mysqli_query($db, $sql);
-//
-//
-//    if ($login && mysqli_num_rows($login) == 1) {
-//        $usuario = mysqli_fetch_assoc($login);
-////        var_dump($usuario);
-//        // Comprobar la contraseña
-//        $verify = password_verify($password, $usuario['password']);
-//        echo var_dump($usuario);
-//
-//        if($verify){
-//            $_SESSION['usuario'] = $usuario;
-//            if($usuario['level'] == 1){
-//                header('Location: user.php');
-//
-//            }else{
-//                header('Location: dashboard.php');
-//            }
-//
-//
-//        }else{
-//            // Si algo falla enviar una sesión con el fallo
-//            $_SESSION['error_login'] = "Verique su nombre de usuario o password";
-//
-////            header('Location: login.php');
-//            echo "MAL aca";
-//            header('Location: login.php');
-//        }
-//    }
-//    else{
-//        // mensaje de error
-//
-//        $_SESSION['error_login'] = "Usuario no existe";
-//        header('Location: login.php');
-////        header('Location: login.php');
-//        echo "MAL aqui";
-//    }
-//
-//
-//}
-//
-//// Redirigir al index.php
-//
 
 
 

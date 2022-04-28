@@ -26,7 +26,15 @@ if(isset($_POST)) {
         echo var_dump($usuario);
 
         if($verify){
+            $Obj = new stdClass;
+
             $_SESSION['usuario'] = $usuario;
+
+            $jsonUsuario =   $_SESSION['usuario']['username'];
+
+            $Obj-> usuario = "$jsonUsuario";
+            file_put_contents("json/user.json", json_encode($Obj));
+
             if($usuario['level'] == 1){
                 header('Location: user.php');
 
